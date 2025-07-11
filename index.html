@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aarya's Portfolio</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --lavender: #b57edc;
+      --dark-bg: #0f0f1a;
+      --text-light: #f5f5f5;
+      --accent: #ffd86b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--text-light);
+      display: flex;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100vh;
+      background-color: #1a1a2e;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    nav img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid var(--lavender);
+      margin-bottom: 1rem;
+    }
+
+    nav a {
+      color: var(--lavender);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .main {
+      margin-left: 220px;
+      padding: 2rem;
+      width: calc(100% - 220px);
+      scroll-behavior: smooth;
+    }
+.typewriter-text::after {
+  content: '|';
+  animation: blink 1s infinite;
+  color: #CBA6F7;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+    section {
+      margin-bottom: 5rem;
+    }
+
+    h1, h2 {
+      color: var(--lavender);
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .hero img {
+      width: 200px;
+      border-radius: 50%;
+      border: 3px solid var(--lavender);
+    }
+
+    .hero-text {
+      max-width: 500px;
+      animation: fadeIn 1s ease-in;
+    }
+    .hero-img img {
+  animation: pulseGlow 3s infinite ease-in-out;
+  transition: transform 0.3s;
+}
+
+.hero-img img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px #b97bdc;
+  }
+  50% {
+    box-shadow: 0 0 25px #b97bdc, 0 0 40px #b97bdc;
+  }
+  100% {
+    box-shadow: 0 0 10px #b97bdc;
+  }
+}
+
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--lavender);
+      color: var(--dark-bg);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: var(--accent);
+      color: var(--dark-bg);
+    }
+    .button:hover {
+  background-color: #fff;
+  color: #121018;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(203, 166, 247, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(203, 166, 247, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+    .card {
+      background-color: #1e1e2e;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 1rem;
+      border-top: 1px solid #333;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media(max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .main {
+        margin: 0;
+        width: 100%;
+      }
+    }
+  </style>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <meta name="description" content="Portfolio of Aarya Patel – Web Developer & Data Analytics Learner" />
+<meta name="keywords" content="Aarya Patel, Portfolio, Web Developer, Data Analyst, Projects, Resume" />
+<meta name="author" content="Aarya Patel" />
+<link rel="shortcut icon" href="favicon.png" type="image/png">
+
+
+</head>
+
+<body>
+  <nav><img src="ppp.jpg" alt="Aarya" style="width: 160px;height: 160px; border-radius: 50%; margin-bottom: 1.5rem; box-shadow: 0 0 20px #b97bdc;">
+
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+   
+    <a href="#skills">Skills</a>
+     <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#funfacts">Fun Facts</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="main">
+<section id="home" class="hero" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
+  <div class="hero-text" style="animation: fadeIn 1s ease-in;">
+    <p style="color: #ccc;">Hi there 👋</p>
+    <h1 class="typewriter-text" style="font-size: 3rem; font-weight: 700; color: #e6e6fa;"></h1>
+
+    <h3 style="color: #b97bdc; font-weight: 500;">Web Developer • Aspiring Data Analyst</h3>
+
+  <p style="margin: 1rem 0; color: #aaa; max-width: 400px;">
+  I love crafting beautiful web experiences and solving problems with code — blending creativity and logic through full-stack development and data analytics.
+</p>
+
+    <a href="https://drive.google.com/file/d/1V4Tb5fp8YX0s_SMfvSMqqKkJ-fOPAQOk/view?usp=drive_link" download class="button" style="background-color: #b97bdc; color: white;">Download Resume</a>
+  </div>
+  <div class="hero-img" style="flex-shrink: 0;">
+   <img src="mee.jpg" alt="Aarya"
+  style="width: 270px; height: auto; padding: 8px; background: #1b1a23; border-radius: 20px;
+         box-shadow: 0 0 40px #b97bdc; border: 2px solid #b97bdc;">
+  </div>
+</section>
+
+
+
+<section id="about" style="background-color: #121018; padding: 80px 20px; color: #e6e6fa;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <h2 style="font-size: 2.5rem; font-weight: bold; color: #CBA6F7; margin-bottom: 30px;">About Me</h2>
+
+    <p style="font-size: 1.1rem; color: #ccc; line-height: 1.8;">
+      Hi, I'm Aarya Patel — a B.Tech IT student at KIIT University with a <strong style="color: #CBA6F7;">CGPA of 9.23</strong>.
+      I’m passionate about tech, with growing interest in <span style="color: #CBA6F7;">data analytics</span> and building smart, user-focused applications.
+    </p>
+
+    <p style="font-size: 1.1rem; color: #ccc; line-height: 1.8; margin-top: 20px;">
+      I work with <span style="color: #CBA6F7;">HTML, CSS, JavaScript, Python</span>, and tools like <span style="color: #CBA6F7;">Streamlit, Flask, Pandas</span> to
+      build dashboards, web apps, and solve real-world problems through data.
+    </p>
+
+    <p style="font-size: 1.1rem; color: #ccc; line-height: 1.8; margin-top: 20px;">
+      My experiences at Keploy and EduSkills exposed me to open source, API testing, and AWS tools like Rekognition. These helped me grow technically and learn collaboration in team settings.
+    </p>
+
+    <p style="font-size: 1.1rem; color: #ccc; line-height: 1.8; margin-top: 20px;">
+      Outside of tech, I enjoy reading, organizing, and building simple, useful things. I believe in lifelong learning and being part of communities that inspire growth.
+    </p>
+  </div>
+</section>
+
+
+<section id="skills" style="background-color: #121018; padding: 80px 20px; color: #e6e6fa;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <h2 style="font-size: 2.5rem; font-weight: bold; color: #CBA6F7; margin-bottom: 30px;">Skills</h2>
+
+    <div class="card" style="background-color: #1e1e2e; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+      <h3 style="color: #b97bdc;">Languages</h3>
+      <p style="color: #ccc;">C, Python, HTML, CSS, JavaScript, C++(basic), Java (basic), SQL</p>
+    </div>
+
+    <div class="card" style="background-color: #1e1e2e; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+      <h3 style="color: #b97bdc;">Tools & Frameworks</h3>
+      <p style="color: #ccc;">VS Code, Git, GitHub, Jupyter, Streamlit, Flask, Power BI, Keploy, Docker</p>
+    </div>
+
+    <div class="card" style="background-color: #1e1e2e; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+      <h3 style="color: #b97bdc;">Cloud & Databases</h3>
+      <p style="color: #ccc;">AWS, MySQL, CSV-based auth systems</p>
+    </div>
+
+    <div class="card" style="background-color: #1e1e2e; padding: 20px; border-radius: 10px;">
+      <h3 style="color: #b97bdc;">Soft Skills & Interests</h3>
+      <p style="color: #ccc;">Problem Solving, Teamwork, Communication, Data Analytics, Web Development</p>
+    </div>
+  </div>
+</section>
+<section id="projects" style="background-color: #0f0e17; padding: 80px 20px; color: #e6e6fa;">
+  <div style="max-width: 1000px; margin: 0 auto;">
+    <h2 style="font-size: 2.5rem; font-weight: bold; color: #CBA6F7; margin-bottom: 30px;">Projects</h2>
+
+    <!-- Project 1 -->
+    <div class="card" style="background-color: #1e1e2e; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+      <h3 style="color: #b97bdc;">AI Powered E-commerce Website</h3>
+      <p style="color: #ccc;">An e-commerce platform featuring fraud detection and a chatbot.</p>
+      <p style="color: #ccc;"><strong>Tech:</strong> HTML, CSS, JavaScript, Flask, Python, Scikit-learn, TensorFlow, NLP</p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="card" style="background-color: #1e1e2e; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+      <h3 style="color: #b97bdc;">LocalBiz Insights – Analytics Dashboard</h3>
+      <p style="color: #ccc;">A Streamlit-based dashboard to analyze sales and forecast trends for small businesses.</p>
+      <p style="color: #ccc;"><strong>Tech:</strong> Python, Pandas, Scikit-learn, Matplotlib, Streamlit</p>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="card" style="background-color: #1e1e2e; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+      <h3 style="color: #b97bdc;">TODO API – Server</h3>
+      <p style="color: #ccc;">Built and tested a TODO API with AI test automation using Keploy CLI and Docker.</p>
+      <p style="color: #ccc;"><strong>Tech:</strong> HTML, CSS, JavaScript, Docker, Keploy</p>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="card" style="background-color: #1e1e2e; padding: 20px; border-radius: 10px;">
+      <h3 style="color: #b97bdc;">Water Pollution Analysis</h3>
+      <p style="color: #ccc;">Used ML models to predict pollution levels in water bodies using structured datasets.</p>
+      <p style="color: #ccc;"><strong>Tech:</strong> Python, Pandas, Random Forest, Jupyter</p>
+    </div>
+
+    <!-- Project 5 -->
+<div class="card" style="background-color: #1e1e2e; padding: 20px; border-radius: 10px; margin-top: 20px;">
+  <h3 style="color: #b97bdc;">Airbnb Frontend Design</h3>
+  <p style="color: #ccc;">
+    Designed a responsive frontend clone of Airbnb as part of a hackathon. Successfully cleared Round 1 based on UI/UX evaluation and code quality.
+  </p>
+  <p style="color: #ccc;"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+</div>
+
+  </div>
+</section>
+
+
+   <section id="achievements" style="background-color: #121018; padding: 80px 20px; color: #e6e6fa;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <h2 style="font-size: 2.5rem; font-weight: bold; color: #CBA6F7; margin-bottom: 30px;">Achievements & Certifications</h2>
+       <!-- EduSkills -->
+    <div class="card" style="background-color: #1e1e2e; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+      <h3 style="color: #b97bdc;">🎓 AWS AI/ML Virtual Internship</h3>
+      <p style="color: #ccc;">Completed through EduSkills • Built basic ML models using SageMaker and Rekognition (Jan–Mar 2025)</p>
+    </div>
+      <!-- Internship & Open Source -->
+    <div class="card" style="background-color: #1e1e2e; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+      <h3 style="color: #b97bdc;">💡 Keploy API Fellowship</h3>
+      <p style="color: #ccc;">Contributed to open source by building and testing API projects using Go, Docker, and Keploy CLI.</p>
+    </div>
+    <!-- Hackathon -->
+    <div class="card" style="background-color: #1e1e2e; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+      <h3 style="color: #b97bdc;">🏆 Re-imagine Hackathon</h3>
+      <p style="color: #ccc;">Team Lead • Cleared Round 1 with Airbnb frontend project • September 2024</p>
+    </div>
+
+  
+ <!-- Certificates -->
+    <div class="card" style="background-color: #1e1e2e; padding: 20px; border-radius: 10px;">
+      <h3 style="color: #b97bdc;">📜 Certifications</h3>
+      <p style="color: #ccc;">
+
+<div class="card" style="background-color: #1e1e2e; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h3 style="color: #ccc;">AI-ML Virtual Internship</h3>
+    <a href="https://drive.google.com/file/d/1ntGKG_yJC7a_PR7g78-sTHG8MtKtETxh/view" target="_blank"
+       style="background-color: #CBA6F7; padding: 6px 14px; color: #121018; border-radius: 6px; text-decoration: none; font-weight: 600;">
+      View
+    </a>
+ </div>
+   <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h3 style="color: #ccc;">Re-imagine Hackathon</h3>
+    <a href="https://drive.google.com/file/d/1ngDhFTkDdKhLjCFcg4Sacez_Pt6SCklB/view" target="_blank"
+       style="background-color: #CBA6F7; padding: 6px 14px; color: #121018; border-radius: 6px; text-decoration: none; font-weight: 600;">
+      View
+    </a>
+ </div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h3 style="color: #ccc;">IBM Machine Learning</h3>
+    <a href="https://drive.google.com/file/d/1RF9G1aNdPrVDAYi5I4XoDzwWCONXeVqN/view" target="_blank"
+       style="background-color: #CBA6F7; padding: 6px 14px; color: #121018; border-radius: 6px; text-decoration: none; font-weight: 600;">
+      View
+    </a>
+ </div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h3 style="color: #ccc;">Python</h3>
+    <a href="https://drive.google.com/file/d/15Aox74_wJ9BLp1A8fnVaO_nhOKkCwhpF/view?usp=sharing" target="_blank"
+       style="background-color: #CBA6F7; padding: 6px 14px; color: #121018; border-radius: 6px; text-decoration: none; font-weight: 600;">
+      View
+    </a>
+ </div>
+     <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h3 style="color: #ccc;">Additional Certifications</h3>
+    <a href="https://drive.google.com/drive/folders/15Mj6eJFw8DiBIlwETK7xykM54vKE_TKu" target="_blank"
+       style="background-color: #CBA6F7; padding: 6px 14px; color: #121018; border-radius: 6px; text-decoration: none; font-weight: 600;">
+      View
+    </a>
+ </div>
+</div>
+
+  </div>
+</section>
+<section id="funfacts" style="background-color: #0f0e17; padding: 80px 20px; color: #e6e6fa;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <h2 style="font-size: 2.5rem; font-weight: bold; color: #CBA6F7; margin-bottom: 30px;">Fun Facts</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+      <div style="background-color: #1e1e2e; padding: 20px; border-radius: 12px;">
+        <p style="font-size: 1.1rem; color: #ccc;">☕ Coffee keeps my code running</p>
+      </div>
+      <div style="background-color: #1e1e2e; padding: 20px; border-radius: 12px;">
+        <p style="font-size: 1.1rem; color: #ccc;">💡 I organize everything — Notion addict!</p>
+      </div>
+      <div style="background-color: #1e1e2e; padding: 20px; border-radius: 12px;">
+        <p style="font-size: 1.1rem; color: #ccc;">🎧 I code best with lo-fi beats</p>
+      </div>
+      <div style="background-color: #1e1e2e; padding: 20px; border-radius: 12px;">
+        <p style="font-size: 1.1rem; color: #ccc;">🚀 I believe in building over perfecting</p>
+      </div>
+      <div style="background-color: #1e1e2e; padding: 20px; border-radius: 12px;">
+  <p style="font-size: 1.1rem; color: #ccc;">📚 I write short poems and journal regularly — creativity fuels my logic.</p>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background-color: #0f0e17; padding: 80px 20px; color: #e6e6fa;">
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2.5rem; font-weight: bold; color: #CBA6F7; margin-bottom: 30px;">Contact Me</h2>
+
+    <p style="font-size: 1.1rem; color: #ccc; margin-bottom: 10px;">
+      Let's connect and collaborate — I’m always open to new ideas, internships, or just tech talk.
+    </p>
+
+   
+    <p style="font-size: 1.1rem; color: #ccc; margin: 10px 0;">
+      📧 <a href="mailto:aaryapatel161@gmail.com" style="color: #CBA6F7;">aaryapatel161@gmail.com</a>
+    </p>
+
+    <p style="font-size: 1.1rem; color: #ccc; margin: 10px 0;">
+      🔗 <a href="https://github.com/aarya-patel1" target="_blank" style="color: #CBA6F7;">GitHub</a> |
+      <a href="https://www.linkedin.com/in/aarya-patel-789250279/" target="_blank" style="color: #CBA6F7;">LinkedIn</a>
+    </p>
+
+<p style="font-size: 1.1rem; color: #ccc; margin-top: 10px;">📍 Open to opportunities across India & remote</p>
+
+  </div>
+</section>
+
+    <footer style="background-color: #121018; padding: 30px 20px; text-align: center; border-top: 1px solid #2b2b2b;">
+  <p style="color: #aaa; font-size: 1rem;">
+    Designed & Built by <span style="color: #CBA6F7; font-weight: 600;">Aarya Patel</span> ✨
+  </p>
+  <p style="color: #666; font-size: 0.9rem; margin-top: 8px;">
+    © 2025 Aarya. All rights reserved.
+  </p>
+</footer>
+
+  </div>
+  <script>
+  ScrollReveal().reveal('section', {
+    origin: 'bottom',
+    distance: '30px',
+    duration: 1000,
+    easing: 'ease-out',
+    interval: 100
+  });
+
+  ScrollReveal().reveal('.card', {
+    origin: 'bottom',
+    distance: '20px',
+    duration: 800,
+    interval: 150
+  });
+</script>
+<script>
+  const text = "I'm Aarya Patel";
+  let index = 0;
+  const speed = 100;
+
+  function typeWriter() {
+    const el = document.querySelector(".typewriter-text");
+    if (index < text.length) {
+      el.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", typeWriter);
+</script>
+<!-- Add this before </body> -->
+<button onclick="scrollToTop()" id="topBtn" title="Back to top">↑</button>
+
+<style>
+  #topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #CBA6F7;
+    color: #121018;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+  }
+</style>
+
+<script>
+  const topBtn = document.getElementById("topBtn");
+  window.onscroll = () => {
+    topBtn.style.display = (document.documentElement.scrollTop > 100) ? "block" : "none";
+  };
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+
+
+</body>
+
+</html>
